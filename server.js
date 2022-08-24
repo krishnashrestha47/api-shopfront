@@ -5,6 +5,10 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 
+//database connection
+import dbConnection from "./src/config/dbConnect.js";
+dbConnection();
+
 app.get("/api/v1", (req, res, next) => {
   res.json({
     message: "Welcome to the api endpoint",
