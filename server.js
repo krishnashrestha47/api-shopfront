@@ -9,7 +9,12 @@ const app = express();
 import dbConnection from "./src/config/dbConnect.js";
 dbConnection();
 
-app.get("/api/v1", (req, res, next) => {
+//routers
+import productRouter from "./src/routers/productRouter.js";
+
+app.use("/api/v1/products", productRouter);
+
+app.get("/", (req, res, next) => {
   res.json({
     message: "Welcome to the api endpoint",
   });
