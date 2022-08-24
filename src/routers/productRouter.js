@@ -1,9 +1,12 @@
 import express from "express";
+import { getAllProducts } from "../models/product-model/product.model.js";
 
 const router = express.Router();
 
-router.get("/", (req, res, next) => {
-  res.send("product router got hit");
+router.get("/", async (req, res, next) => {
+  const result = await getAllProducts();
+  res.send(result);
+  console.log(result);
 });
 
 export default router;
