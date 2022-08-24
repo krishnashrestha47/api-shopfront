@@ -19,8 +19,10 @@ dbConnection();
 
 //routers
 import productRouter from "./src/routers/productRouter.js";
+import categoryRouter from "./src/routers/categoryRouter.js";
 
 app.use("/api/v1/products", productRouter);
+app.use("/api/v1/categories", categoryRouter);
 
 app.get("/", (req, res, next) => {
   res.json({
