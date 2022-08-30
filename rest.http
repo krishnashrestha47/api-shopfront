@@ -1,2 +1,13 @@
 ### get method
-GET http://localhost:8000/api/v1/categories
+GET http://localhost:8000/api/v1/products/62f1e9ed3a26803389841b7f
+
+### post method
+POST http://localhost:8000/api/v1/products/
+Content-Type: application/json
+
+[
+    "63058ca2bb0afbbdd84df8ea",
+    "63058ca7bb0afbbdd84df8f1",
+    "63058ce9bb0afbbdd84df8f8"
+]
+
