@@ -13,6 +13,8 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan("tiny"));
 
+app.use(express.json());
+
 //database connection
 import dbConnection from "./src/config/dbConnect.js";
 dbConnection();
